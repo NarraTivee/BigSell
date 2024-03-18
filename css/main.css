@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Madimi+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+
+/* глобальные стили */
+body{
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    background-image: linear-gradient(to right top, #12c2e9 0%, #c471ed 50%, #FC5C7D 100%);
+    background-size: 300%;
+    user-select: none;
+    animation: body_background 5s infinite;
+}
+@keyframes body_background {
+    50%{
+        background-position-x: 50%;
+    }
+}
+*{
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+.wrapper{
+    width: 100%;
+    height: 100%;
+}
+/* глобальные стили */
+
+/* header */
+.header{
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #9314fa;
+    padding: 1.2rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 20;
+    position: fixed;
+}
+.icon{
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    background-image: linear-gradient(to bottom, #c471ed, #c471ed);
+    background-repeat: no-repeat;
+    background-size: 150px;
+    background-position-y: 150px;
+    border-radius: 5px;
+    transition: all .3s;
+}
+/* header */
+
+
+/* icon */
+/* icon */
+
+
+/* menu */
+.burger_btn{
+    background-image: linear-gradient(to bottom, #c471ed, #c471ed);
+    background-repeat: no-repeat;
+    background-size: 150px;
+    background-position-y: 150px;
+    padding: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .2s;
+}
+.burger_container{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+}
+.burger_item{
+    width: 30px;
+    height: 4px;
+    background-color: #111;
+    border-radius: 2px;
+    transition: all .3s;
+}
+.burger_item:nth-child(1){
+    transform: rotate(0deg);
+}
+.burger_open .burger_container .burger_item:nth-child(1){
+    transform: rotate(45deg);
+}
+.burger_open .burger_container .burger_item:nth-child(3){
+    transform: rotate(-45deg);
+    margin-top: -1.35rem;
+}
+.burger_open .burger_container .burger_item:nth-child(2){
+    opacity: 0;
+    pointer-events: none;
+}
+/* menu */
+
+
+/* navbar */
+/* navbar close*/
+.nav_bar_close{
+    position: absolute;
+    position: fixed;
+    background-color: #222;
+    height: 100%;
+    right: -14rem;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all .5s;
+    z-index: 20;
+    pointer-events: none;
+}
+.nav_bar_list{
+    padding: 7.5rem 2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    list-style-type: none;
+}
+.nav_bar_list a{
+    color: #fff;
+}
+.nav_bar_item{
+    padding: 1rem 2.2rem;
+    background-image: linear-gradient(to right, #9314fa, #9314fa);
+    background-size: 200px;
+    background-repeat: no-repeat;
+    background-position-x: -200px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .25s;
+}
+/* navbar close*/
+
+/* navbar open*/
+.nav_bar_open{
+    position: absolute;
+    position: fixed;
+    background-color: #222;
+    height: 100%;
+    right: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all .2s ease;
+    z-index: 20;
+    pointer-events: all;
+}
+/* navbar open*/
+
+.about_us_info_close, .News_info_close, .Contacts_info_close{
+    background-color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    position: absolute;
+    opacity: 0;
+    transition: all .2s;
+    right: 13.2rem;
+    pointer-events: none;
+}
+/* about_us_info_close + about_us_info_open*/
+.about_us_info_close{
+    top: 12.2rem;
+}
+.about_us_info_open{
+    opacity: 1;
+    pointer-events: all;
+}
+/* about_us_info_close + about_us_info_open*/
+/* Contacts_info_close + Contacts_info_open*/
+.Contacts_info_close{
+    top: 17.3rem;
+}
+.Contacts_info_open{
+    opacity: 1;
+    pointer-events: all;
+}
+/* Contacts_info_close + Contacts_info_open*/
+/* News_info_close + News_info_open*/
+.News_info_close{
+    top: 24rem;
+}
+.News_info_open{
+    opacity: 1;
+    pointer-events: all;
+}
+/* News_info_close + News_info_open*/
+
+
+/* navbar */
+
+.icon:hover a{
+    transition: all .3s;
+}
+/* адаптация для ховеров для пк */
+@media screen and (min-width: 1000px) {
+    /* icon hover */
+    .icon:hover{
+        transform: scale(1.15);
+    }
+    .icon:hover{
+        background-position-y: 0;
+    }
+    .icon:hover a{
+        color: #fff;
+    }
+    /* icon hover */
+
+    /* menu hover */
+    .burger_btn:hover{
+        transform: scale(1.15);
+    }
+    .burger_btn:hover{
+        background-position-y: 0;
+    }
+    /* menu hover */
+    .nav_bar_item:hover{
+        transform: scale(1.15);
+    }
+    .nav_bar_item:hover{
+        background-position-x: 0;
+    }
+    .burger_btn:hover .burger_item{
+        background-color: #fff;
+    }
+    /* navbar hover */
+}
+/* адаптация для активов для пк */
+
+/* адаптация для ховеров для пк */
+@media screen and (min-width: 1000px) {
+    /* icon active */
+    .icon:active{
+        transform: scale(1);
+    }
+    /* icon active */
+
+    /* menu active */
+    .burger_btn:active{
+        transform: scale(1);
+    }
+    /* menu active */
+    /* navbar active */
+    .nav_bar_item:active{
+        transform: scale(1);
+    }
+    /* navbar active */
+}
+/* адаптация для активов для пк */
+
+/* адаптация для мобил */
+@media (max-width: 1000px) {
+    /* navbar */
+    .nav_bar_close{
+        width: 100%;
+        right: -100%;
+    }
+    .nav_bar_open{
+        width: 100%;
+        right: 0;
+    }
+    .nav_bar_item{
+        background-color: #613ebc;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* navbar */
+
+
+    /* icon */
+    .icon{
+        background-color: #c471ed; 
+    }
+    /* icon #520c86*/
+
+
+    /* menu #520c86*/
+    .burger_btn{
+        background-color: #c471ed;
+    }
+    /* menu */
+
+    /* info_blocks */
+    .News_info_close, .Contacts_info_close, .about_us_info_close{
+        top: 30rem;
+        right: 50%;
+        transform: translateX(50%);
+    }
+    /* info_blocks */
+
+
+    /* icon active */
+    .icon:active{
+        transform: scale(0.8);
+    }
+    /* icon active */
+    /* menu active */
+    .burger_btn:active{
+        transform: scale(0.8);
+    }
+    /* menu active */
+    /* navbar active */
+    .nav_bar_item:active{
+        transform: scale(0.9);
+    }
+    /* navbar active */
+}
+@media (max-width: 1050px) {
+    .pachalka{
+        display: flex;
+    }
+}
+/* адаптация для мобил */
+
+

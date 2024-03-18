@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Jost:ital,wght@0,100..900;1,100..900&family=Madimi+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Gemstones&display=swap');
+
+/* глобальные стили */
+.main_block{
+    width: 100vw;
+    height: auto;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+/* глобальные стили */
+
+.text{
+    position: absolute;
+}
+
+/* slider */
+img{
+    max-width: 100%;
+    width: auto;
+}
+.slider_container {
+    position: relative;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: auto;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-top: 2rem;
+    border-radius: 5px;
+}
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.prev_btn,
+.next_btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    color: white;
+    background-color: rgba(46, 43, 43, 0.8);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.prev_btn {
+    left: 10px;
+}
+.next_btn {
+    right: 10px;
+}
+/* slider */
+
+.sell_stocks{
+    margin-top: 10rem;
+    width: 100%;
+    text-align: center;
+}
+.sell_stocks h1{
+    font-size: 80px;
+}
+.sell_stocks p{
+    font-size: 30px;
+}
+
+
+
+/* адаптация слайдера под мобилы */
+@media (max-width: 600px){
+    .prev_btn,
+    .next_btn{
+        font-size: 16px;
+        width: 30px;
+        height: 30px;
+    }
+}
+@media (min-width: 900px) {
+    .slider_container{
+        width: auto;
+    }
+}
+/* адаптация слайдера под мобилы */
+/* адаптив слайдера для пк */
+/* адаптив слайдера для пк */
+

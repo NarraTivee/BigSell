@@ -1,0 +1,191 @@
+
+
+/* products */
+.products{
+    width: 100%;
+    height: auto;
+    margin-top: 40rem;
+    background-color: var(--clr-2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding-bottom: 5rem;
+}
+.products_cards_container{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+/* nitro */
+.product_card_nitro, .product_card_nitro_basic{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    background-image: linear-gradient(to right top, #12c2e9, #c471ed, #f64f59);
+    gap: 1rem;
+    background-size: 500px;
+    animation: nitro_full_anim 5s infinite ;
+}
+.nitro_container{
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.product_nitro_info{
+    width: 100%;
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+.product_nitro_info p{
+    font-weight: 400;
+    color: #444;
+}
+.product_nitro_info h2{
+    color: #111;
+}
+/* nitro */
+
+
+/* V-BUCKS */
+.fortnite_container{
+    display: flex;
+    gap: 2.5rem;
+}
+.product_card_v_bucks{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    gap: 1rem;
+}
+.product_v_bucks_info p{
+    font-weight: 400;
+    color: #444;
+}
+/* V-BUCKS */
+
+/* crew */
+.product_card_crew{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    gap: 1rem;
+}
+/* crew */
+
+
+/* общие */
+.buy_btn{
+    padding: 0;
+    border-radius: 5px;
+    background-color: #9710FF;
+    transition: all .2s;
+}
+.buy_btn a{
+    color: #111;
+    padding: 3rem 5rem;
+}
+.img_nitro,.img_v_bucks{
+    width: 250px;
+    height: auto;
+    border-radius: 5px; 
+}
+/* общие */
+
+/* products */
+
+/* анимации */
+@keyframes nitro_full_anim {
+    0%{
+        background-position-x: 0;
+        background-position-y: 0;
+    }
+    50%{
+        background-position-x: -220px;
+    }
+}
+/* анимации */
+/* адаптация под мобилы */
+@media (max-width: 1200px){
+    .fortnite_container{
+        flex-direction: column;
+    }
+    .products{
+        margin-top: 30rem;
+    }
+}
+@media (max-width: 700px){
+    .nitro_container{
+        flex-direction: column;
+    }
+}
+@media (max-width: 1520px){
+    .products{
+        margin-top: 33rem;
+    }
+}
+@media (max-width: 1200px){
+    .products{
+        margin-top: 25rem;
+    }
+}
+@media (max-width: 1000px){
+    .products{
+        margin-top: 20rem;
+    }
+}
+@media (max-width: 900px){
+    .products{
+        margin-top: 35rem;
+    }
+}
+@media (max-width: 800px){
+    .products{
+        margin-top: 30rem;
+    }
+}
+@media (max-width: 800px){
+    .products{
+        margin-top: 30rem;
+    }
+}
+@media (max-width: 700px){
+    .products{
+        margin-top: 26rem;
+    }
+}
+@media (max-width: 600px){
+    .products{
+        margin-top: 22rem;
+    }
+}
+@media (max-width: 500px){
+    .products{
+        margin-top: 18rem;
+    }
+}
+@media (max-width: 400px){
+    .products{
+        margin-top: 15rem;
+    }
+}
+@media (max-width: 300px){
+    .products{
+        margin-top: 12rem;
+    }
+}
+/* адаптация под мобилы */
